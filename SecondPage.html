@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Answer this.......</title>
+  <!--Update the Questions-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css" type="text/css" >
+</head>
+<!--=================================================================================================================-->
+<body>
+<!--=================================================================================================================-->
+<nav class="navbar fixed-top" style="background-color: rgba(134,67,46,0.8)" >
+  <h1 style="color:rgba(134,67,46,0);">QUESTIONS</h1>
+</nav>
+<nav class="navbar fixed-top" style=" top: 2.5% ;left: 60%; right: 0%;">
+  <div id="progress" style=" transition: width 1s ease-in-out; text-align: center; height: 80%; width: 0%;background-color: red; color: white">0</div>
+</nav>
+<!--=================================================================================================================-->
+<br><br><br><br>
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);;">
+      <div class="card-header">
+        <h5> &bigstar; What type of character you have?</h5>
+      </div>
+      <div class="card-body" onclick="clik1()">
+        <p class="card-text">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Introvert" name="q1" value="Introvert" class="custom-control-input">
+            <label class="custom-control-label" for="Introvert">Introvert</label></input>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Extrovert" name="q1" value="Extrovert" class="custom-control-input">
+            <label class="custom-control-label" for="Extrovert">Extrovert</label></input>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Both" name="q1" value="Both" class="custom-control-input">
+            <label class="custom-control-label" for="Both">Both</label></input>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Short_Tempered" name="q1" value="Short_Tempered" class="custom-control-input">
+            <label class="custom-control-label" for="Short_Tempered">Short Tempered</label></input>
+          </div>
+        </p>
+      </div>
+    </div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+    <div class="card-header">
+      <h5> &bigstar; In what form do you express your mood?</h5>
+    </div>
+    <div class="card-body" onclick="clik2()">
+      <p class="card-text">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Sharing" name="q2" value="Sharing" class="custom-control-input">
+        <label class="custom-control-label" for="Sharing">Sharing</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Crying" name="q2" value="Crying" class="custom-control-input">
+        <label class="custom-control-label" for="Crying">Crying</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Loneliness" name="q2" value="Loneliness" class="custom-control-input">
+        <label class="custom-control-label" for="Loneliness">Loneliness</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Shouting_at_Others" name="q2" value="Shouting_at_Others" class="custom-control-input">
+        <label class="custom-control-label" for="Shouting_at_Others">Shouting at Others</label></input>
+      </div>
+      </p>
+    </div>
+  </div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &bigstar; Do you feel anything different in you during <span id="mood2">those situations</span>?</h5>
+  </div>
+  <div onclick="clik3()">
+    <div id="askfeel">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="yesfeel" name="askfeeling" value="yes" class="custom-control-input">
+        <label class="custom-control-label" for="yesfeel">YES</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="nofeel" name="askfeeling" value="no" class="custom-control-input">
+        <label class="custom-control-label" for="nofeel">NO</label></input>
+      </div>
+    </div>
+    <div class="card-body" id="ifyesfeel">
+      <p class="card-text" onkeyup="input()">
+        <textarea id="textarea" placeholder="Specify here....."></textarea>
+      </p>
+    </div>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5>&bigstar; How you relieve yourself from <span id="mood">that type of mood</span> ?</h5>
+  </div>
+  <div class="card-body" onclick="clik4()">
+    <p class="card-text" >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Through friends" name="q4" value="Through friends" class="custom-control-input">
+      <label class="custom-control-label" for="Through friends">Through friends</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Songs" name="q4" value="By songs" class="custom-control-input">
+      <label class="custom-control-label" for="Songs">Songs</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Self introspection" name="q4" value="By self introspection" class="custom-control-input">
+      <label class="custom-control-label" for="Self introspection">Self introspection</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Others" name="q4" value="Others" class="custom-control-input">
+      <label class="custom-control-label" for="Others">Others</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &bigstar; Do you use food as a medium to get out from <span id="mood1">hyper mood?</span></h5>
+  </div>
+  <div class="card-body" onclick="clik5()" style="margin: 0 auto; font-size: x-large;">
+    <p class="card-text" >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yes" name="q5" value="yes" class="custom-control-input">
+      <label class="custom-control-label" for="yes">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="no" name="q5" value="no" class="custom-control-input">
+      <label class="custom-control-label" for="no">No</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5>&bigstar; What type of food you prefer?</h5>
+  </div>
+  <div class="card-body" onclick="clik6()" >
+    <p class="card-text"  >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="junk" name="q6" value="junk" class="custom-control-input">
+      <label class="custom-control-label" for="junk">Junk</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="fruits" name="q6" value="fruits" class="custom-control-input">
+      <label class="custom-control-label" for="fruits">Fruits</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="nuts" name="q6" value="nuts" class="custom-control-input">
+      <label class="custom-control-label" for="nuts">Nuts</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="fast_food" name="q6" value="fast food" class="custom-control-input">
+      <label class="custom-control-label" for="fast_food">Fast Food</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="other" name="q6" value="other food" class="custom-control-input">
+      <label class="custom-control-label" for="other">Others</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5>&bigstar; In which type of mood you prefer <span id="food">them</span></h5>
+  </div>
+  <div class="card-body" onclick="clik7()" >
+    <p class="card-text"  >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Happiness" name="q7" value="Happiness" class="custom-control-input">
+      <label class="custom-control-label" for="Happiness">Happiness</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Sadness" name="q7" value="Sadness" class="custom-control-input">
+      <label class="custom-control-label" for="Sadness">Sadness</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Joy" name="q7" value="Joy" class="custom-control-input">
+      <label class="custom-control-label" for="Joy">Joy</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="lonelines" name="q7" value="lonelines" class="custom-control-input">
+      <label class="custom-control-label" for="lonelines">Loneliness</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5>&bigstar; How do you feel when you consume <span id="food1">these foods</span> ?</h5>
+  </div>
+  <div class="card-body" onclick="clik8()" >
+    <p class="card-text"  >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Happy" name="q8" value="Happy" class="custom-control-input">
+      <label class="custom-control-label" for="Happy">Happy</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Restful" name="q8" value="Restful" class="custom-control-input">
+      <label class="custom-control-label" for="Restful">Restful</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Relaxed" name="q8" value="Relaxed" class="custom-control-input">
+      <label class="custom-control-label" for="Relaxed">Relaxed</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Irritated" name="q8" value="Irritated" class="custom-control-input">
+      <label class="custom-control-label" for="Irritated">Irritated</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="otherss" name="q8" value="otherss" class="custom-control-input">
+      <label class="custom-control-label" for="otherss">Others</label></input>
+    </div>
+    </p>
+    <div onkeyup="text()">
+      <p>
+        <textarea id="textarea1" placeholder="Specify here....."></textarea>
+      </p>
+    </div>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+  <div id="button" class="mx-auto" style="width: 300px;">
+    <button class="btn btn-primary btn-lg btn-block" onclick="select()" >Next Page</button>
+  </div>
+<br><br>
+<!--=================================================================================================================-->
+<script type="text/javascript" src="index2.js" ></script>
+<!--=================================================================================================================-->
+</body>
+</html>

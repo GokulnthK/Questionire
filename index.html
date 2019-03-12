@@ -1,0 +1,410 @@
+<html>
+<head>
+  <title>Questionire</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="home.css">
+  <!--Beautify it......................-->
+  <!--Validate the data-->
+</head>
+<body>
+<nav class="navbar fixed-top" style="background-color: rgba(134,67,46,0.8)" >
+  <h5 id="banner" >ASSESSMENT OF FOOD INTAKE CHANGES ASSOCIATED WITH VARYING PSYCHOLOGICAL MOODS THROUGH A WEBPAGE CREATED FOR WOMEN</h5>
+</nav>
+<div class="card" style="margin-top: 7.5%;">
+  <div class="card-body">
+    <table class="table table-borderless">
+      <tbody>
+      <tr>
+        <th scope="row">Name : </th>
+        <td><input type="text" id="name" placeholder="Enter_Name" /><br></td>
+      </tr>
+      <tr>
+        <th scope="row">Age : </th>
+        <td><input type="number" id="age" placeholder="Enter_Age" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Marital Status : </th>
+        <td onclick="MsSelect()">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Bachelor" name="M_S" value="Bachelor" class="custom-control-input">
+            <label class="custom-control-label" for="Bachelor">Bachelor</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="married" name="M_S" value="Married" class="custom-control-input">
+            <label class="custom-control-label" for="married">Married</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">HomeTown : </th>
+        <td><input type="text" id="homeTown" placeholder="Enter_Home_Town" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Type Of Family : </th>
+        <td onclick="tofSelect()">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="joint" name="ToF" value="joint" class="custom-control-input">
+            <label class="custom-control-label" for="joint">Joint family</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="nuclear" name="ToF" value="nuclear" class="custom-control-input">
+            <label class="custom-control-label" for="nuclear">Nuclear family</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Height : </th>
+        <td><input type="number" id="height" placeholder="Enter_Height" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Weight : </th>
+        <td><input type="number" id="weight" placeholder="Enter_Weight" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Need any Nutritional advice? : </th>
+        <td  onclick="askSelect()">
+          <div id="ask">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="yes" name="ask" value="yes" class="custom-control-input">
+              <label class="custom-control-label" for="yes">YES</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="no" name="ask" value="no" class="custom-control-input">
+              <label class="custom-control-label" for="no">NO</label></input>
+            </div>
+          </div>
+          <div id="ifyes">
+            Choose Any .....
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Instagram" name="advice" value="Instagram" class="custom-control-input">
+              <label class="custom-control-label" for="Instagram">Instagram</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Facebook" name="advice" value="Facebook" class="custom-control-input">
+              <label class="custom-control-label" for="Facebook">Facebook</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Google+" name="advice" value="Google+" class="custom-control-input">
+              <label class="custom-control-label" for="Google+">Google+</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Others" name="advice" value="Others" class="custom-control-input">
+              <label class="custom-control-label" for="Others">Others</label></input>
+            </div><br>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">How many meals will you have? : </th>
+        <td onclick="mealCount()">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="2" name="meals" value="2meals" class="custom-control-input">
+            <label class="custom-control-label" for="2">2</label></input>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="3" name="meals" value="3meals" class="custom-control-input">
+            <label class="custom-control-label" for="3">3</label></input>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="4" name="meals" value="4meals" class="custom-control-input">
+            <label class="custom-control-label" for="4">4</label></input>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Do you skip any meal ? </th>
+        <td onclick="askSelectSkip()">
+          <div id="skipmeal">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="yesskip" name="askskip" value="yes" class="custom-control-input">
+              <label class="custom-control-label" for="yesskip">YES</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="noskip" name="askskip" value="no" class="custom-control-input">
+              <label class="custom-control-label" for="noskip">NO</label></input>
+            </div>
+          </div>
+          <div id="ifskipyes">
+            Which meal?
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Breakfast" name="meal" value="Breakfast" class="custom-control-input">
+              <label class="custom-control-label" for="Breakfast">Breakfast</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Lunch" name="meal" value="Lunch" class="custom-control-input">
+              <label class="custom-control-label" for="Lunch">Lunch</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Snack" name="meal" value="Snack" class="custom-control-input">
+              <label class="custom-control-label" for="Snack">Snack</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="Dinner" name="meal" value="Dinner" class="custom-control-input">
+              <label class="custom-control-label" for="Dinner">Dinner</label></input>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Do you prefer to have snacks ?</th>
+        <td  onclick="askSnack()">
+          <div id="snackask">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="snackyes" name="Snack" value="yes" class="custom-control-input">
+              <label class="custom-control-label" for="snackyes">YES</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="snackno" name="Snack" value="no" class="custom-control-input">
+              <label class="custom-control-label" for="snackno">NO</label></input>
+            </div>
+          </div>
+          <div id="ifsnackyes" >
+            Choose
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="junk" name="fav_snack" value="junk" class="custom-control-input">
+              <label class="custom-control-label" for="junk">Junk</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="fruits" name="fav_snack" value="fruits" class="custom-control-input">
+              <label class="custom-control-label" for="fruits">Fruits</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="nuts" name="fav_snack" value="nuts" class="custom-control-input">
+              <label class="custom-control-label" for="nuts">Nuts</label></input>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="fast_food" name="fav_snack" value="fast_food" class="custom-control-input">
+              <label class="custom-control-label" for="fast_food">Fast food</label></input>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Food Group</th>
+        <th scope="col">Daily</th>
+        <th scope="col">Weekly</th>
+        <th scope="col">Monthly</th>
+        <th scope="col">Rarely</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr onclick="cereal()" >
+        <td>Cereals</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Cdaily" name="cereals" value="Cerealdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Cdaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Cweekly" name="cereals" value="Cerealweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Cweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Cmonthly" name="cereals" value="Cerealmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Cmonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Crarely" name="cereals" value="Cerealrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Crarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="pulse()" >
+        <td>Pulses</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Pdaily" name="pulses" value="Pulsesdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Pdaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Pweekly" name="pulses" value="Pulsesweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Pweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Pmonthly" name="pulses" value="Pulsesmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Pmonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Prarely" name="pulses" value="Pulsesrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Prarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="milks()" >
+        <td>Milk and its products</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Midaily" name="milk" value="Milkdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Midaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Miweekly" name="milk" value="Milkweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Miweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Mimonthly" name="milk" value="Milkmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Mimonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Mirarely" name="milk" value="Milkrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Mirarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="meats()" >
+        <td>Meat and its products</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Medaily" name="meat" value="Meatdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Medaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Meweekly" name="meat" value="Meatweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Meweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Memonthly" name="meat" value="Meatmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Memonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Merarely" name="meat" value="Meatrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Merarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="nuts()" >
+        <td>Nuts</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Ndaily" name="nuts" value="Nutsdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Ndaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Nweekly" name="nuts" value="Nutsweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Nweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Nmonthly" name="nuts" value="Nutsmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Nmonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Nrarely" name="nuts" value="Nutsrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Nrarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="sugars()" >
+        <td>Sugar</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Sdaily" name="sugar" value="Sugardaily" class="custom-control-input">
+            <label class="custom-control-label" for="Sdaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Sweekly" name="sugar" value="Sugarweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Sweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Smonthly" name="sugar" value="Sugarmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Smonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Srarely" name="sugar" value="Sugarrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Srarely"></label>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="fats()" >
+        <td>Fats and Oils</td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Fdaily" name="fat" value="Fatsdaily" class="custom-control-input">
+            <label class="custom-control-label" for="Fdaily"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Fweekly" name="fat" value="Fatsweekly" class="custom-control-input">
+            <label class="custom-control-label" for="Fweekly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Fmonthly" name="fat" value="Fatsmonthly" class="custom-control-input">
+            <label class="custom-control-label" for="Fmonthly"></label>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Frarely" name="fat" value="Fatsrarely" class="custom-control-input">
+            <label class="custom-control-label" for="Frarely"></label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    <button style="width: 200px; margin: 0 auto;" class="btn btn-primary btn-lg btn-block" onclick="move()" >Next Page</button>
+  </div>
+</div>
+<div id="modal">
+  <div id="modalcontents">
+    <span id="close" onclick="hide()" class="close">&times;</span>
+    <br>
+    The following questionnaire you fill is completely on your own concern.
+    These information collected will be maintained private.
+    The data entered will be deleted once the project gets over.
+    <div id="agree" class="custom-control custom-radio" onclick="agreePage()">
+      <input type="radio" id="doyouagree" name="doyouagree" class="custom-control-input">
+      <label class="custom-control-label" for="doyouagree">Do you agree</label></input>
+      <span>
+        <img id="image" src="https://media1.tenor.com/images/44e9ae2bc7ffeb8c83567e45262c3122/tenor.gif" alt=":thumbsup:">
+      </span>
+    </div>
+    <button style="width: 200px; margin: 0 auto;" class="btn btn-primary btn-lg btn-block" onclick="next1()">Submit</button>
+    <br>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="index.js" ></script>
+</html>

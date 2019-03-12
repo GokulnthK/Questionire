@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Answer this.......</title>
+  <!--Update the Questions-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="third.css" type="text/css" >
+</head>
+<!--=================================================================================================================-->
+<body>
+<!--=================================================================================================================-->
+<nav class="navbar fixed-top" style="background-color: rgba(134,67,46,0.8)" >
+  <h1 style="color:rgba(134,67,46,0);">QUESTIONS</h1>
+</nav>
+<nav class="navbar fixed-top" style=" top: 2.5% ;left: 60%; right: 0%;">
+  <div id="progress" style=" transition: width 1s ease-in-out; text-align: center; height: 80%; width: 0%;background-color: red; color: white">0</div>
+</nav>
+<!--=================================================================================================================-->
+<br><br><br><br>
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Do you have control over your food intake?</h5>
+  </div>
+  <div>
+    <div onclick="clik1()">
+      <div id="askintake">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="yesintake" name="askin" value="yesintake" class="custom-control-input">
+          <label class="custom-control-label" for="yesintake">YES</label></input>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="nointake" name="askin" value="nointake" class="custom-control-input">
+          <label class="custom-control-label" for="nointake">NO</label></input>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" id="ifnointake" onclick="click11()">
+      <p class="card-text">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Taste" name="q1" value="Taste" class="custom-control-input">
+        <label class="custom-control-label" for="Taste">Taste</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Stress" name="q1" value="Stress" class="custom-control-input">
+        <label class="custom-control-label" for="Stress">Stress</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Irritation" name="q1" value="Irritation" class="custom-control-input">
+        <label class="custom-control-label" for="Irritation">Irritation</label></input>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Relaxation" name="q1" value="Relaxation" class="custom-control-input">
+        <label class="custom-control-label" for="Relaxation">Relaxation</label></input>
+      </div>
+      </p>
+    </div>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Do you follow or followed any diet? </h5>
+  </div>
+  <div class="card-body" onclick="clik3()" style="margin: 0 auto;">
+    <p class="card-text" >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yesdiet" name="q3" value="yesdiet" class="custom-control-input">
+      <label class="custom-control-label" for="yesdiet">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="nodiet" name="q3" value="nodiet" class="custom-control-input">
+      <label class="custom-control-label" for="nodiet">No</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Whether you are consistent? </h5>
+  </div>
+  <div class="card-body" onclick="clik4()" style="margin: 0 auto">
+    <p class="card-text" >
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yesconsistent" name="q4" value="yesconsistent" class="custom-control-input">
+      <label class="custom-control-label" for="yesconsistent">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="noconsistent" name="q4" value="noconsistent" class="custom-control-input">
+      <label class="custom-control-label" for="noconsistent">No</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Are you concerned about your fitness?</h5>
+  </div>
+  <div class="card-body" onclick="clik2()" style="margin: 0 auto">
+    <p class="card-text">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yes2fitness" name="q2" value="yes2fitness" class="custom-control-input">
+      <label class="custom-control-label" for="yes2fitness">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="no2fitness" name="q2" value="no2fitness" class="custom-control-input">
+      <label class="custom-control-label" for="no2fitness">No</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  How you try to achieve your fitness? </h5>
+  </div>
+  <div class="card-body" onclick="clik5()">
+    <p class="card-text">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Diet" name="q5" value="Diet" class="custom-control-input">
+      <label class="custom-control-label" for="Diet">Diet</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Exercise" name="q5" value="Exercise" class="custom-control-input">
+      <label class="custom-control-label" for="Exercise">Exercise</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Both" name="q5" value="Both" class="custom-control-input">
+      <label class="custom-control-label" for="Both">Both</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Others" name="q5" value="Others" class="custom-control-input">
+      <label class="custom-control-label" for="Others">Others</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="None" name="q5" value="None" class="custom-control-input">
+      <label class="custom-control-label" for="None">None</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Do you have any health issues? </h5>
+  </div>
+  <div id="askissue" onclick="clik6()">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yes2issue" name="issue" value="yes2issue" class="custom-control-input">
+      <label class="custom-control-label" for="yes2issue">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="no2issue" name="issue" value="no2issue" class="custom-control-input">
+      <label class="custom-control-label" for="no2issue">No</label></input>
+    </div>
+  </div>
+  <div class="card-body" id="ifyesissue" onclick="clik61()">
+    <p class="card-text">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Ulcer" name="q6" value="Ulcer" class="custom-control-input">
+      <label class="custom-control-label" for="Ulcer">Ulcer</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Diabetics" name="q6" value="Diabetics" class="custom-control-input">
+      <label class="custom-control-label" for="Diabetics">Diabetics</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Hypertension" name="q6" value="Hypertension" class="custom-control-input">
+      <label class="custom-control-label" for="Hypertension">Hypertension</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Irregular Periods" name="q6" value="Irregular Periods" class="custom-control-input">
+      <label class="custom-control-label" for="Irregular Periods">Irregular Periods</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Other" name="q6" value="Other" class="custom-control-input">
+      <label class="custom-control-label" for="Other">Others</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:60%; left: 20%; border-radius: 20px; background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5> &ggg;  Do any one of your parents have the above mentioned health problem? </h5>
+  </div>
+  <div class="card-body" onclick="clik7()" style="margin: 0 auto">
+    <p class="card-text">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="yesproblem" name="q7" value="yesproblem" class="custom-control-input">
+      <label class="custom-control-label" for="yesproblem">Yes</label></input>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="noproblem" name="q7" value="noproblem" class="custom-control-input">
+      <label class="custom-control-label" for="noproblem">No</label></input>
+    </div>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div class="card" style="width:80%; left: 10%; border-radius: 20px;background-color: rgba(98, 98, 98, 0.37);">
+  <div class="card-header">
+    <h5>Kindly evaluate the table.</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text"  >
+      <table class="table table-hover" style="background-color: #afa687">
+      <thead>
+      <tr>
+        <th scope="col">Facts</th>
+        <th scope="col">Agree</th>
+        <th scope="col">May/Maynot</th>
+        <th scope="col">Disagree</th>
+        <th scope="col">No comments</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr onclick="clik80()" >
+        <th scope="row">Easy to use</th>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="agreeuse" name="use" value="agreeuse" class="custom-control-input">
+            <label class="custom-control-label" for="agreeuse"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="mayuse" name="use" value="mayuse" class="custom-control-input">
+            <label class="custom-control-label" for="mayuse"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="nocommentsuse" name="use" value="nocommentsuse" class="custom-control-input">
+            <label class="custom-control-label" for="nocommentsuse"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="disagreeuse" name="use" value="disagreeuse" class="custom-control-input">
+            <label class="custom-control-label" for="disagreeuse"></label></input>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="clik81()">
+        <th scope="row">Less time consuming</th>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="timeagree" name="time" value="timeagree" class="custom-control-input">
+            <label class="custom-control-label" for="timeagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="timemay" name="time" value="timemay" class="custom-control-input">
+            <label class="custom-control-label" for="timemay"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="timedisagree" name="time" value="timedisagree" class="custom-control-input">
+            <label class="custom-control-label" for="timedisagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="timenocomments" name="time" value="timenocomments" class="custom-control-input">
+            <label class="custom-control-label" for="timenocomments"></label></input>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="clik82()">
+        <th scope="row">Interesting</th>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="interestagree" name="interest" value="interestagree" class="custom-control-input">
+            <label class="custom-control-label" for="interestagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="interestmay" name="interest" value="interestmay" class="custom-control-input">
+            <label class="custom-control-label" for="interestmay"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="interestdisagree" name="interest" value="interestdisagree" class="custom-control-input">
+            <label class="custom-control-label" for="interestdisagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="interestnocomments" name="interest" value="interestnocomments" class="custom-control-input">
+            <label class="custom-control-label" for="interestnocomments"></label></input>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="clik83()">
+        <th scope="row">Need updates</th>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="updateagree" name="update" value="updateagree" class="custom-control-input">
+            <label class="custom-control-label" for="updateagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="updatemay" name="update" value="updatemay" class="custom-control-input">
+            <label class="custom-control-label" for="updatemay"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="updatedisagree" name="update" value="updatedisagree" class="custom-control-input">
+            <label class="custom-control-label" for="updatedisagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="updatenocomments" name="update" value="updatenocomments" class="custom-control-input">
+            <label class="custom-control-label" for="updatenocomments"></label></input>
+          </div>
+        </td>
+      </tr>
+      <tr onclick="clik84()">
+        <th scope="row">Is Questions are relevant to the topic?</th>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Questionagree" name="Question" value="Questionagree" class="custom-control-input">
+            <label class="custom-control-label" for="Questionagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Questionmay" name="Question" value="Questionmay" class="custom-control-input">
+            <label class="custom-control-label" for="Questionmay"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Questiondisagree" name="Question" value="Questiondisagree" class="custom-control-input">
+            <label class="custom-control-label" for="Questiondisagree"></label></input>
+          </div>
+        </td>
+        <td>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="Questionnocomments" name="Question" value="Questionnocomments" class="custom-control-input">
+            <label class="custom-control-label" for="Questionnocomments"></label></input>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </p>
+  </div>
+</div>
+<br><!--=================================================================================================================-->
+<div id="button" class="mx-auto" style="width: 300px;">
+  <button class="btn btn-primary btn-lg btn-block" onclick="select1()" >Submit</button>
+</div>
+<br><br>
+<!--=================================================================================================================-->
+<script type="text/javascript" src="index3.js" ></script>
+<!--=================================================================================================================-->
+</body>
+</html>

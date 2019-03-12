@@ -1,0 +1,23 @@
+#ifnointake{
+  display: none;
+}
+#askintake{
+  margin-left: 40%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+div:hover{
+  font-size: 105%;
+  font-weight: bold;
+}
+div{
+  transition: color 300ms ease-out;
+}
+#askissue{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 38%;
+}
+#ifyesissue{
+  display: none;
+}

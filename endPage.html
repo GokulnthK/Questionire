@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="end.css" >
+</head>
+<body>
+<div class="bg-image"></div>
+<div class="bg-text">
+  <h1 style="font-size:50px">Thank you</h1>
+</div>
+<div id="Name" class="bg-text">
+  <h2>Done By:</h2>
+    E.Krithika
+  First year M.Sc.,FSN
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyDNhGx-831gspbo7EtcgCNlpHAjHM4z4ok",
+    authDomain: "mithra-a3dd0.firebaseapp.com",
+    databaseURL: "https://mithra-a3dd0.firebaseio.com",
+    projectId: "mithra-a3dd0",
+    storageBucket: "mithra-a3dd0.appspot.com",
+    messagingSenderId: "855712791016"
+  };
+  firebase.initializeApp(config);
+  var firebase = firebase.database().ref();
+</script>
+<script>
+  fullData = []
+  fullData[0] = window.localStorage.getItem("first");
+  fullData[1] = window.localStorage.getItem("second");
+  fullData[2] = window.localStorage.getItem("third");
+  window.localStorage.removeItem("first");
+  window.localStorage.removeItem("second");
+  window.localStorage.removeItem("third");
+  console.log(fullData)
+  firebase.push().set(fullData);
+</script>
+</html>
