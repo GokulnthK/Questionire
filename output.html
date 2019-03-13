@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OUTPUT</title>
+  <link rel="stylesheet" href="output.css" >
+</head>
+<body>
+<h1><span id="count" ></span></h1>
+  <table id="out" style="font-size: 25px;border: black 2px solid;">
+    <tr>
+
+    </tr>
+  </table>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyDNhGx-831gspbo7EtcgCNlpHAjHM4z4ok",
+    authDomain: "mithra-a3dd0.firebaseapp.com",
+    databaseURL: "https://mithra-a3dd0.firebaseio.com",
+    projectId: "mithra-a3dd0",
+    storageBucket: "mithra-a3dd0.appspot.com",
+    messagingSenderId: "855712791016"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  var name = "hi",q,key;
+  var firebase = firebase.database().ref();
+  firebase.on('value',function (data) {
+    q = data.val();
+    key = Object.keys(q);
+    document.getElementById("count").innerText = "Count = "+key.length;
+    for(var i=0;i<key.length;i++){
+      name = q[key[i]];
+      aa(name);
+      btn = document.createElement("tr");
+      t = document.createTextNode("\n");
+      btn.appendChild(t);
+      document.getElementById("out").append(btn);
+    }
+  });
+  var btn, t, a="";
+  function aa(){
+    var arr = name.split(",");
+    for(var i=0;i<arr.length;i++) {
+      if((i+1)%5===0 || i === arr.length-1){
+        a = a + arr[i]+" ";
+        btn = document.createElement("td");
+        t = document.createTextNode(a+"\n");
+        btn.appendChild(t);
+        document.getElementById("out").append(btn);
+        a="";
+      }
+      else{
+        a = a + arr[i]+"\n";
+      }
+    }
+  }
+  setTimeout(function() {
+    location.reload();
+  }, 10000);
+</script>
+</html>
