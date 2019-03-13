@@ -1,7 +1,8 @@
 var data = [];
 var data1 = [];
-var value = 0;
-function select1() {
+var value;
+  function select1() {
+  value = 0;
   var radios = document.getElementsByName('askin');
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === 'radio' && radios[i].checked) {
@@ -32,11 +33,21 @@ function select1() {
       value = value + 1;
     }
   }
+  var a ,b;
   radios = document.getElementsByName('q6');
+  var r  = document.getElementsByName('issue');
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === 'radio' && radios[i].checked) {
-      value = value + 1;
+      a=1;
     }
+  }
+  for (var i = 0; i < r.length; i++) {
+    if (r[i].type === 'radio' && r[i].checked) {
+      b=1;
+    }
+  }
+  if(a==1 || b==1){
+    value = value +1;
   }
   radios = document.getElementsByName('q7');
   for (var i = 0; i < radios.length; i++) {
@@ -75,8 +86,8 @@ function select1() {
     }
   }
   if(value == 12){
-    window.localStorage.setItem("third", data);
-    window.location = "endPage.html"
+    // window.localStorage.setItem("third", data);
+    // window.location = "endPage.html"
   }
   else{
     alert("Don't rush to submit....")
