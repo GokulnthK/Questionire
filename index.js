@@ -29,7 +29,7 @@ function  move() {
     count+=1;
   }
   height = document.getElementById("height").value;
-  if(height <= 0 || height >200){
+  if(height <= 0 || height >300){
     d=1;
     document.getElementById("height").value = 0;
     height = 0;
@@ -38,7 +38,7 @@ function  move() {
     count+=1;
   }
   weight = document.getElementById("weight").value;
-  if(weight <= 0 || weight >200){
+  if(weight <= 0 || weight >300){
     e=1;
     document.getElementById("weight").value = 0;
     weight = 0;
