@@ -74,7 +74,7 @@ function select1() {
       value = value + 1;
     }
   }
-  if(value -= 12){
+  if(value == 12){
     window.localStorage.setItem("third", data);
     window.location = "endPage.html"
   }
