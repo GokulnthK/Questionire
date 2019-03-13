@@ -168,8 +168,8 @@ function clik6() {
   element = document.querySelector('input[name="q6"]:checked');
   if (element != null) {
     data[5] = "which food as medium :"+element.value;
-    document.getElementById("food").innerText = data[5];
-    document.getElementById("food1").innerText = data[5];
+    document.getElementById("food").innerText = element.value;
+    document.getElementById("food1").innerText = element.value;
     if(q6==0){
       q6+=1;
       increment();
