@@ -148,7 +148,6 @@ function clik2() {
     }
     if(element.value.includes("yes")){
       document.getElementById("None").checked = false;
-      clik5();
       document.getElementById("Diet").disabled = false;
       document.getElementById("Exercise").disabled = false;
       document.getElementById("Both").disabled = false;
