@@ -86,8 +86,8 @@ var value;
     }
   }
   if(value == 12){
-    // window.localStorage.setItem("third", data);
-    // window.location = "endPage.html"
+    window.localStorage.setItem("third", data);
+    window.location = "endPage.html"
   }
   else{
     alert("Don't rush to submit....")
